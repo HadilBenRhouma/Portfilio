@@ -454,6 +454,8 @@ section { padding-block: 96px; }
   box-shadow: var(--shadow-card);
   animation: float 5s ease-in-out infinite;
 }
+.orb-badge img { width: 30px; height: 30px; }
+.orb-badge.b1 img { width: 44px; height: 44px; } /* logo Odoo : mot-symbole horizontal */
 .orb-badge.b1 { top: 4%;  left: -4%;  animation-delay: 0s; }
 .orb-badge.b2 { top: 42%; right: -8%; animation-delay: .9s; }
 .orb-badge.b3 { bottom: 6%; left: 6%; animation-delay: 1.8s; }
