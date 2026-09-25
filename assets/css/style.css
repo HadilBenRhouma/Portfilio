@@ -777,7 +777,7 @@ footer {
   color: var(--purple);
   margin-bottom: 16px;
 }
-.foot-grid p { color: var(--muted); font-size: .92rem; max-width: 340px; }
+.foot-grid p { color: var(--muted); font-size: .92rem; max-width: 340px; text-align: justify; }
 .foot-links { display: grid; gap: 10px; }
 .foot-links a { color: var(--muted); font-size: .92rem; transition: color .25s ease, padding-left .25s ease; }
 .foot-links a:hover { color: var(--purple); padding-left: 5px; }
