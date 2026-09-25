@@ -157,7 +157,7 @@
 
   /* ---------------------------------------------------------
      7. Formulaire de contact
-     Site statique : on ouvre le client mail avec le message
+     Site statique : on ouvre WhatsApp avec le message
      pré-rempli, sans envoyer quoi que ce soit en arrière-plan.
      --------------------------------------------------------- */
   var form = document.getElementById("contact-form");
@@ -171,14 +171,13 @@
       var email = form.elements.email.value.trim();
       var message = form.elements.message.value.trim();
 
-      var subject = (lang === "fr" ? "Portfolio — message de " : "Portfolio — message from ") + name;
-      var body = (lang === "fr"
-        ? "Nom : " + name + "\nEmail : " + email + "\n\n" + message
-        : "Name: " + name + "\nEmail: " + email + "\n\n" + message);
+      var text = (lang === "fr"
+        ? "Bonjour Hadil, je vous contacte depuis votre portfolio.\n\nNom : " + name + "\nEmail : " + email + "\n\n" + message
+        : "Hi Hadil, I'm reaching out from your portfolio.\n\nName: " + name + "\nEmail: " + email + "\n\n" + message);
 
-      window.location.href = "mailto:hadil.benrhouma@enis.tn"
-        + "?subject=" + encodeURIComponent(subject)
-        + "&body=" + encodeURIComponent(body);
+      // wa.me ouvre WhatsApp (appli sur mobile, WhatsApp Web sur ordinateur)
+      // avec le message pré-rempli vers le numéro indiqué.
+      window.open("https://wa.me/21626434087?text=" + encodeURIComponent(text), "_blank", "noopener");
 
       var note = document.getElementById("form-note");
       if (note) {

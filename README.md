@@ -50,11 +50,11 @@ La langue choisie est mémorisée dans le navigateur ; au premier passage, c'est
 | Couleurs, espacements, polices | variables `:root` en haut de `assets/css/style.css` |
 | Niveaux des barres de compétences | attribut `data-level` (0 à 100) dans `skills.html` |
 | Compteurs animés | attributs `data-count` / `data-suffix` dans `index.html` |
-| Adresse du formulaire | constante `mailto:` dans `assets/js/main.js` |
+| Numéro WhatsApp du formulaire | URL `https://wa.me/…` dans `assets/js/main.js` |
 
 ## Formulaire de contact
 
-Le site étant statique, le formulaire **ouvre la messagerie du visiteur** avec le message pré-rempli ; rien n'est envoyé en arrière-plan. Pour recevoir les messages directement par HTTP, branchez le `<form>` sur un service tiers (Formspree, Web3Forms…) et retirez le gestionnaire `submit` dans `main.js`.
+Le site étant statique, le formulaire **ouvre WhatsApp** (appli sur mobile, WhatsApp Web sur ordinateur) avec le message pré-rempli vers le +216 26 434 087 ; le visiteur n'a plus qu'à appuyer sur « Envoyer ». Rien n'est envoyé en arrière-plan.
 
 ## Déploiement
 
