@@ -356,6 +356,7 @@ section { padding-block: 96px; }
 .hero .role .sep { color: var(--purple); margin-inline: 10px; }
 .lead {
   margin-top: 24px;
+  text-align: justify;
   max-width: 540px;
   color: var(--muted);
   font-size: 1.03rem;
@@ -533,7 +534,7 @@ section { padding-block: 96px; }
   border: 1px solid var(--border);
 }
 .card h3 { font-size: 1.14rem; }
-.card p { margin-top: 10px; color: var(--muted); font-size: .93rem; }
+.card p { margin-top: 10px; color: var(--muted); font-size: .93rem; text-align: justify; }
 
 /* Tag chips */
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
