@@ -554,6 +554,20 @@ section { padding-block: 96px; }
   background: rgba(168, 85, 247, .12);
 }
 
+/* Lien vers le code d'un projet, en bas de carte */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: .86rem;
+  font-weight: 600;
+  color: var(--purple);
+  transition: color .25s ease, gap .25s ease;
+}
+.card-link svg { width: 16px; height: 16px; }
+.card-link:hover { color: var(--fuchsia); gap: 11px; }
+
 /* ---------- Grids ---------- */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
