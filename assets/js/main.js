@@ -66,13 +66,22 @@
   var burger = document.querySelector(".burger");
   var mobile = document.querySelector(".nav-mobile");
   if (burger && mobile) {
-    burger.addEventListener("click", function () {
-      var open = mobile.classList.toggle("open");
+    // Le libellé suit l'état du menu ; data-title-* est relu par applyLang
+    // si la langue change pendant que le menu est ouvert.
+    var setMenu = function (open) {
+      mobile.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("data-title-en", open ? "Close menu" : "Open menu");
+      burger.setAttribute("data-title-fr", open ? "Fermer le menu" : "Ouvrir le menu");
+      var label = burger.getAttribute("data-title-" + document.documentElement.lang);
+      burger.setAttribute("title", label);
+      burger.setAttribute("aria-label", label);
+    };
+    burger.addEventListener("click", function () {
+      setMenu(!mobile.classList.contains("open"));
     });
     window.addEventListener("scroll", function () {
-      mobile.classList.remove("open");
-      burger.setAttribute("aria-expanded", "false");
+      if (mobile.classList.contains("open")) setMenu(false);
     }, { passive: true });
   }
 
