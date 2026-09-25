@@ -429,6 +429,7 @@ section { padding-block: 96px; }
   overflow: hidden;
   animation: float 6.5s ease-in-out infinite;
 }
+.avatar-photo picture { display: block; width: 100%; height: 100%; }
 .avatar-photo img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -791,12 +792,13 @@ footer {
 }
 
 /* ---------- Scroll reveal ---------- */
-.reveal {
+/* Masqué seulement si le JS tourne : sans JS, le contenu reste visible. */
+.js .reveal {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity .8s cubic-bezier(.16, 1, .3, 1), transform .8s cubic-bezier(.16, 1, .3, 1);
 }
-.reveal.in { opacity: 1; transform: none; }
+.js .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Page header (inner pages) ---------- */
 .page-head {
