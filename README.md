@@ -22,7 +22,8 @@ contact.html      Formulaire + coordonnées
 assets/
   css/style.css   Design system complet (thème sombre violet)
   js/main.js      Langue, navigation, animations, carrousel, formulaire
-  img/hadil.png   Photo de profil
+  img/hadil.webp  Photo de profil (WebP, 48 Ko)
+  img/hadil.jpg   Repli JPEG + image og:image (74 Ko)
   files/          CV en PDF
 ```
 
